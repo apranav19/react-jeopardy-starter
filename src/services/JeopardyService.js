@@ -14,4 +14,9 @@ export class JeopardyService {
         return this.client.get(this.url);
     }
 
+    getQuestions(numQuestions) {
+        const preparedUrl = this.url + "?count="+numQuestions;
+        return this.client.get(preparedUrl);
+    }
+
 }
